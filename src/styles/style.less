@@ -1,0 +1,171 @@
+@darkColor:#28293E;
+
+body{
+    min-height: 100vh;
+    margin: 0;
+    // overflow-y: hidden;
+    background-image: radial-gradient(ellipse at 0 0, #fff8ce, #ffb61d);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.wrapper{
+    width: 90%;
+    max-width: 1340px;
+    margin: 0 auto;
+
+    &__header{
+        padding: 50px 0;
+    }
+}
+
+.main > * {
+    flex-grow: 1;
+    flex-basis: 0;
+    flex-shrink: 0;
+}
+
+.main{
+
+    display: flex;
+    gap: 2rem;
+
+    &__section{
+
+        &__title{
+            font-size: 66px;
+    
+            strong{
+                text-transform: uppercase;
+                color: brown;
+            }
+        }
+
+        &__text{
+            font-weight: 500;
+        }
+
+        &__upper{
+            text-transform: uppercase;
+        }
+
+        &__form{
+            display: flex;
+            gap: 1rem;
+
+            input{
+                padding: 1rem;
+                border-radius: 6px;
+                border: 1px solid @darkColor;
+                outline: none;
+            }
+
+            // input[type="submit"]{
+            //     background-color: #031D44;
+            //     color: #ffffff;
+            // }
+
+            input[type="text"]{
+                background-color: transparent;
+                width: 100%;
+                // margin: auto;
+            }
+
+            input[type="text"]::placeholder{
+                color: @darkColor;
+            }
+        }
+
+        &__searchs{
+            padding: 2rem 0;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__results{
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            width: 300px;
+            
+            .emoji-card{
+                padding: 1rem;
+                border-radius: 6px;
+                background-color: @darkColor;
+                width: 100%;
+
+                &:hover{
+                    background-color: #31324d;
+                    cursor: pointer;
+                }
+            }
+
+            .emoji-name{
+                color: white;
+            }
+        }
+    }
+
+
+    &__animation{
+        position: relative;
+
+        img{
+            position: absolute;
+        }
+
+        img:nth-child(1){
+            top: 200px;
+            left: -70px;
+            animation: animaemoji 2s infinite alternate;
+        }
+
+        img:nth-child(2){
+            top: 60px;
+            left: 420px;
+            animation: animaemoji 2s 2s infinite alternate;
+        }
+
+        img:nth-child(3){
+            animation: animaemoji 2s 1.5s infinite alternate;
+        }
+
+        img:nth-child(4){
+            top: 340px;
+            left: 10px;
+            animation: animaemoji 2s 1s infinite alternate;
+        }
+
+        img:nth-child(5){
+            top: -90px;
+            left: -30px;
+            animation: animaemoji 2s 2.5s infinite alternate;
+        }
+
+        img:nth-child(6){
+            top: 380px;
+            left: 350px;
+            animation: animaemoji 2s .5s infinite alternate;
+        }
+    }
+}
+
+@keyframes animaemoji{
+    from{
+        transform: translate(0,0);
+    }
+    to{
+        transform: translate(-10px, -20px);
+    }
+}
+
+// Pequenos celulares	max-width: 480px
+// Celulares em geral	max-width: 576px
+// Tablets (retrato)	max-width: 768px
+// Tablets (paisagem)	max-width: 992px
+// Laptops pequenos	max-width: 1200px
+// Telas grandes / Desktop	min-width: 1201px
+
+
