@@ -21,7 +21,6 @@ function html() {
     .pipe(gulp.dest('./dist'));
 }
 
-
 function script() {
   return gulp.src('./src/scripts/*.js')
     .pipe(terser())
