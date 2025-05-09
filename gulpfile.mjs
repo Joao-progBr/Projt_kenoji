@@ -59,9 +59,6 @@ export function images() {
     .pipe(gulp.dest('./dist/images'));
 }
 
-
-
-
 export const build = gulp.parallel(styles, html, images, script)
 export const watch = function(){
     gulp.watch('./src/styles/*.less', gulp.parallel(styles))
