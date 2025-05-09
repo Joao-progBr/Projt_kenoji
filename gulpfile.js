@@ -17,7 +17,7 @@ function styles() {
 
 function html() {
   return gulp.src('./src/index.html')
-    .pipe(replace('./styles/style.less', './styles/style.min.css'))
+    .pipe(replace('../dist/styles/style.min.css', './styles/style.min.css'))
     .pipe(gulp.dest('./dist'));
 }
 
