@@ -11,7 +11,8 @@ import less from 'gulp-less';
 import rename from 'gulp-rename';
 import replace from 'gulp-replace';
 import imagemin from 'gulp-imagemin';
-import uglify from 'gulp-uglify'
+// import uglify from 'gulp-uglify'
+import terser from 'gulp-terser'
 
 import mozjpeg from 'imagemin-mozjpeg';
 import pngquant from 'imagemin-pngquant';
@@ -36,7 +37,7 @@ function html(){
 
 function script(){
   return gulp.src('./src/scripts/*.js')
-  .pipe(uglify())
+  .pipe(terser())
   .pipe(gulp.dest('./dist/scripts'))
 
 }
