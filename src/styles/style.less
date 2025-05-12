@@ -89,21 +89,26 @@ body{
             flex-wrap: wrap;
             gap: 1rem;
             width: 300px;
+            max-height: 200px;
+            overflow-y: auto;
+           
             
             .emoji-card{
                 padding: 1rem;
                 border-radius: 6px;
-                background-color: @darkColor;
+                background-color: #a52a2a;
                 width: 100%;
-
+                
+                
                 &:hover{
-                    background-color: #31324d;
+                    background-color: #cc4747;
                     cursor: pointer;
                 }
             }
 
-            .emoji-name{
+            a{
                 color: white;
+                text-decoration: none;
             }
         }
     }
@@ -167,5 +172,105 @@ body{
 // Tablets (paisagem)	max-width: 992px
 // Laptops pequenos	max-width: 1200px
 // Telas grandes / Desktop	min-width: 1201px
+
+
+@media screen and (max-width: 955px) {
+
+    .wrapper{
+        width: 90%;
+    }
+
+    body{
+        background-repeat:no-repeat ;
+        max-height: 0;
+    }
+
+    .main{
+        display: block;
+        text-align: center;
+        &__section{
+            &__title{
+                font-size: 55px;
+            }
+
+            &__searchs{
+                padding: 0;
+            }
+        }
+
+         &__animation{
+            img{
+                display: none;
+            }
+         }
+    }
+}
+
+@media screen and (min-width: 955px) and (max-width: 1270px) {
+
+    .wrapper{
+        width: 90%;
+    }
+
+    .main{
+        &__section{
+            &__title{
+                font-size: 55px;
+            }
+
+            &__searchs{
+                padding: 0;
+            }
+        }
+
+         &__animation{
+            position: relative;
+            // width: 100px;
+            img{
+                position: absolute;
+                width: 150px;
+            }
+            
+            img:nth-child(1){
+                top: 200px;
+                left: -20px;
+                animation: animaemoji 2s infinite alternate;
+            }
+            
+            img:nth-child(2){
+                top: 60px;
+                left: 300px;
+                animation: animaemoji 2s 2s infinite alternate;
+                // border: 2px solid red;
+            }
+            
+            img:nth-child(3){
+                top: 100px;
+                left: 90px;
+                width: 300px;
+                animation: animaemoji 2s 1.5s infinite alternate;
+            }
+            
+            img:nth-child(4){
+                top: 340px;
+                left: 10px;
+                animation: animaemoji 2s 1s infinite alternate;
+            }
+            
+            img:nth-child(5){
+                top: 20px;
+                left: 40px;
+                animation: animaemoji 2s 2.5s infinite alternate;
+            }
+            
+            img:nth-child(6){
+                top: 280px;
+                left: 300px;
+                animation: animaemoji 2s .5s infinite alternate;
+            }
+        }
+    }
+    
+}
 
 
