@@ -174,15 +174,22 @@ body{
 // Telas grandes / Desktop	min-width: 1201px
 
 
-@media screen and (max-width: 955px) {
+
+
+
+@media screen and (max-width: 768px) {
 
     .wrapper{
         width: 90%;
+
+        &__header{
+            padding: 40px 0px 10px;
+        }
     }
 
     body{
-        background-repeat:no-repeat ;
-        max-height: 0;
+        // background-repeat:no-repeat ;
+        min-height: 100vh;
     }
 
     .main{
@@ -190,7 +197,7 @@ body{
         text-align: center;
         &__section{
             &__title{
-                font-size: 55px;
+                font-size: 35px;
             }
 
             &__searchs{
@@ -207,6 +214,10 @@ body{
 }
 
 @media screen and (min-width: 955px) and (max-width: 1270px) {
+
+    body{
+        min-height: 100vh;
+    }
 
     .wrapper{
         width: 90%;
