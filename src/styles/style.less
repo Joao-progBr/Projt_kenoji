@@ -213,7 +213,7 @@ body{
     }
 }
 
-@media screen and (min-width: 955px) and (max-width: 1270px) {
+@media screen and (min-width: 768px) and (max-width: 900px) {
 
     body{
         min-height: 100vh;
@@ -226,7 +226,76 @@ body{
     .main{
         &__section{
             &__title{
-                font-size: 55px;
+                font-size: 45px;
+            }
+
+            &__searchs{
+                padding: 0;
+            }
+        }
+
+         &__animation{
+            position: relative;
+            // width: 100px;
+            img{
+                position: absolute;
+                width: 110px;
+            }
+            
+            img:nth-child(1){
+                top: 180px;
+                left: 40px;
+                animation: animaemoji 2s infinite alternate;
+            }
+            
+            img:nth-child(2){
+                top: 90px;
+                left: 260px;
+                animation: animaemoji 2s 2s infinite alternate;
+            }
+            
+            img:nth-child(3){
+                top: 100px;
+                left: 90px;
+                width: 250px;
+                animation: animaemoji 2s 1.5s infinite alternate;
+            }
+            
+            img:nth-child(4){
+                top: 260px;
+                left: 100px;
+                animation: animaemoji 2s 1s infinite alternate;
+            }
+            
+            img:nth-child(5){
+                // border: 2px solid red;
+                top: 40px;
+                left: 70px;
+                animation: animaemoji 2s 2.5s infinite alternate;
+            }
+            
+            img:nth-child(6){
+                top: 250px;
+                left: 250px;
+                animation: animaemoji 2s .5s infinite alternate;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1270px) {
+    body{
+        min-height: 100vh;
+    }
+
+    .wrapper{
+        width: 90%;
+    }
+
+    .main{
+        &__section{
+            &__title{
+                font-size: 45px;
             }
 
             &__searchs{
@@ -243,16 +312,15 @@ body{
             }
             
             img:nth-child(1){
-                top: 200px;
-                left: -20px;
+                top: 190px;
+                left: 20px;
                 animation: animaemoji 2s infinite alternate;
             }
             
             img:nth-child(2){
-                top: 60px;
+                top: 90px;
                 left: 300px;
                 animation: animaemoji 2s 2s infinite alternate;
-                // border: 2px solid red;
             }
             
             img:nth-child(3){
@@ -263,8 +331,9 @@ body{
             }
             
             img:nth-child(4){
-                top: 340px;
-                left: 10px;
+                border: 2px solid red;
+                top: 300px;
+                left: 80px;
                 animation: animaemoji 2s 1s infinite alternate;
             }
             
@@ -276,12 +345,11 @@ body{
             
             img:nth-child(6){
                 top: 280px;
-                left: 300px;
+                left: 290px;
                 animation: animaemoji 2s .5s infinite alternate;
             }
         }
     }
-    
 }
 
 
